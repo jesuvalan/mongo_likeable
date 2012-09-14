@@ -105,7 +105,7 @@ module Mongo
         self.dislikes -= simplify_instance(*models)
 
         models.each do |model|
-          model.likers -= simplify_instance(self)
+          model.dislikers -= simplify_instance(self)
 
           model.save
         end
